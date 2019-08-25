@@ -1,0 +1,60 @@
+<!--miniprogram/pages/university/uIndex/uIndex.wxml-->
+<view class='content'>
+  <view class='centerLogo'>
+  <image class='lianjinLogo' src="../../../images/Logo.jpeg" mode="aspectFit"></image>
+  </view>
+     
+  <view class="testTitle">测一测你能上哪所日本大学</view>
+
+  <view class="major">
+  <view class="secondTitle">你是？</view>
+    <radio-group class="radioGroup" bindchange="majorChange">
+    <radio class="subRadio" wx:for-items="{{majors}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+      <text>{{item.value}}</text>
+    </radio>
+    </radio-group>
+  </view>
+
+  <view class="universityLevel">
+    <view class="secondTitle">你的大学属于？</view>
+    <picker bindchange="universityChange" value="{{universityIndex}}" range="{{universities}}">
+    <view class="universitySelect">{{universities[universityIndex]}}</view>
+    </picker>
+  </view>
+
+  <view class="grade">
+    <view class="secondTitle">各种成绩</view>
+    <view class="subGrade" id="average">
+    <text class='thirdTitle'>平均分</text>
+    <input class="numberGrade" type="digit" placeholder="输入你的大学平均分" bindinput='averageGradeChange'/>
+    </view>
+
+    <view class="subGrade" id="japanese">
+    <view class="secondeTitle">
+    <text class='thirdTitle'>日语</text>
+    <radio-group class="radioGroup" bindchange="japaneseChange">
+    <radio class="subRadio" wx:for-items="{{japaneses}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+      <text>{{item.value}}</text>
+    </radio>
+    </radio-group>
+    <input class="numberGrade" wx:if='{{japaneseInput}}' type="number" placeholder="输入你的日语分数" bindinput='japaneseGradeChange'/>
+    </view>
+    </view>
+
+    <view class="subGrade" id="english">
+    <view class="secondeTitle">
+    <text class='thirdTitle'>英语</text>
+    <radio-group class="radioGroup" bindchange="englishChange">
+    <radio class="subRadio" wx:for-items="{{englishs}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+      <text>{{item.value}}</text>
+    </radio>
+    </radio-group>
+    <input class="numberGrade" wx:if='{{englishInput}}' type="number" placeholder="输入你的英语分数" bindinput='englishGradeChange'/>
+    </view>
+    </view>
+  </view>
+
+  <view class='goResult' >
+    <button class='weui-btn' type='primary' bindtap='startTest'>开始评估</button>
+  </view>
+</view>

@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class="main">
+    <swiper class='swiper' indicator-dots="true" autoplay="true" interval="{{interval}}" duration="{{duration}}" circular="true" bindchange='onSwiperChange'>
+        <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+            <swiper-item bindtap='onSwiperTap'>
+                <image src="{{item}}" class="swiper-item"/>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+<view class="container">
+
+  <!-- 用户 openid -->
+  <view class="userinfo" wx:if="{{!logged}}">
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+    >授权以解锁更多功能</button>
+  </view>
+  <view class="userinfo" wx:if="{{logged}}" bindtap='goHistory'>
+    <view class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"></view>
+    <text>浏览历史记录</text>
+  </view>
+
+  <view class='examList'>
+    <button class='goProblemList' disabled='{{!logged}}' bindtap='goMathList'>高数题库</button>
+    <button class='goProblemList' disabled='{{!logged}}' bindtap='goJapaneseList'>日语题库</button>
+    <button class='goProblemList' disabled='{{!logged}}' bindtap='goEnglishList'>英语题库</button>
+    <button class='goProblemList' disabled='{{!logged}}' bindtap='goDailyQues'>每日一题</button>
+  </view>
+
+</view>
+
+

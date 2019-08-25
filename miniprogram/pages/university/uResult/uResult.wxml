@@ -1,0 +1,16 @@
+<!--miniprogram/pages/university/uResult/uResult.wxml-->
+<view class="container">
+  <view class='title'>评分{{yourPoints}}
+  </view>
+  <view class='title'>你的成绩能上
+  </view>
+  <view>{{universityName}}</view>
+
+  <view class='photo'>
+    <image class='universityPhoto' src="../../../images/Logo.jpeg" mode="aspectFit"></image>
+    <image class='universityPhoto' src="../../../images/Logo.jpeg" mode="aspectFit"></image> 
+  </view>
+
+  <button class='onShare' open-type="share">分享转发此结果</button>
+</view>
+

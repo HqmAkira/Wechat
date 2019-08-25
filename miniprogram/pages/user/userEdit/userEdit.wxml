@@ -1,0 +1,53 @@
+<!--miniprogram/pages/user/userEdit/userEdit.wxml-->
+
+<view class='infoTag'>
+<view class='edit'>
+  <label class='tagLabel'>真实姓名</label>
+  <input bindinput='nameChange' value='{{userName}}'/>
+</view>
+
+<view class='edit'>
+  <label class='tagLabel'>联系电话</label>
+  <input bindinput='phoneChange' value='{{phone}}'/>
+</view>
+
+<view class='edit'>
+  <label class='tagLabel'>QQ</label>
+  <input bindinput='qqChange' value='{{qq}}'/>
+</view>
+</view>
+
+<view class='infoTag'>
+<view class='edit'>
+  <label class='tagLabel'>大学名字</label>
+  <input bindinput='uniChange' value='{{universityName}}'/>
+</view>
+
+<view class='edit'>
+  <label class='tagLabel'>文/理</label>
+  <picker bindchange='cateChange' value="{{category}}" range="{{categoryArray}}">
+  <view class='picker'>{{categoryArray[category]}}</view>
+  </picker> 
+</view>
+
+<view class='edit'>
+  <label class='tagLabel'>大学专业</label>
+  <input bindinput='majorChange' value='{{major}}'/>
+</view>
+</view>
+
+<view class='infoTag'>
+<view class='edit'>
+  <label class='tagLabel'>目标大学院名字</label>
+  <input bindinput='goalNameChange' value='{{goalName}}'></input>
+</view>
+
+<view class='edit'>
+  <label class='tagLabel'>目标大学院专业</label>
+  <input bindinput='goalMajorChange' value='{{goalMajor}}'></input>
+</view>
+</view>
+
+<button bindtap='editFinish'>完成</button>
+
+

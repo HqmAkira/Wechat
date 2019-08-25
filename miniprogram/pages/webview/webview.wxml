@@ -1,0 +1,6 @@
+<!--miniprogram/pages/webview/webview.wxml-->
+<web-view wx:if="{{webIndex == 0}}" src="https://www.baidu.com/"></web-view>
+
+<web-view wx:if="{{webIndex == 1}}" src="https://www.mekoedu.com/"></web-view>
+
+<web-view wx:if="{{webIndex == 2}}" src="https://mp.weixin.qq.com/"></web-view>

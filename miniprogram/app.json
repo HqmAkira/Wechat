@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/university/uIndex/uIndex",
+    "pages/university/uResult/uResult",
+    "pages/webview/webview",
+    "pages/user/userInfo/userInfo",
+    "pages/user/userEdit/userEdit"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#b7b7b7",
+    "selectedColor": "#AB956D",
+    "borderStyle": "black",
+    "backgroundColor": "#f5f5f5",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/university/uIndex/uIndex",
+        "text": "评估"
+      },
+      {
+        "pagePath": "pages/user/userInfo/userInfo",
+        "text": "用户"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

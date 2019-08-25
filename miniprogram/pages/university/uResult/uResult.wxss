@@ -1,0 +1,23 @@
+/* miniprogram/pages/university/uResult/uResult.wxss */
+@import '../../../style/general.wxss';
+.title{
+  font-size: 40rpx;
+  margin-bottom: 30px;
+}
+
+.photo {
+  display: flex;
+  justify-content: center;
+}
+
+.universityPhoto {
+  background-color: #FFFFFF;
+  width: 400rpx;
+  height: 400rpx;
+}
+
+.onShare {
+  margin-top: 20px;
+  background-color: burlywood;
+  width: 400rpx;
+}

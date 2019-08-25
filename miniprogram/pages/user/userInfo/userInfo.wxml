@@ -1,0 +1,49 @@
+<!--miniprogram/pages/user/userInfo/userInfo.wxml-->
+  <view class="userinfo" wx:if="{{!logged}}">
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+    >授权以解锁更多功能</button>
+  </view>
+
+  <view class="userinfo" wx:if="{{logged}}">
+    <view class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"></view>
+    <view class='rowInfo'>
+      <text>{{userInfo.nickName}}</text>
+      <button bindtap='goEdit'>编辑个人信息</button>
+    </view>
+  </view>
+
+  <view class='infoSheet' wx:if='{{hasGoal}}'>
+    <view class='infoRow'>
+      <label>目标大学: </label>
+      <text class='infoRow_Text'>{{goalName}}</text>
+    </view>
+    <view class='infoRow'>
+      <label>目标专业: </label>
+      <text class='infoRow_Text'>{{goalMajor}}</text>
+    </view>
+    <view class='infoRow'>
+      <label>目标难度: </label>
+      <text class='infoRow_Text'>{{goalEvaluation}}</text>
+    </view>
+    <view class='btnRow'>
+    <button bindtap='goEdit' class='btnMid'>修改我的目标</button>
+    <button bindtap='refresh'><image mode='aspectFill' src='../../../images/refresh.png' plain='true' class='btnimage'></image></button>
+    </view>
+  </view>
+  <button wx:else bindtap='goEdit'>还没有给自己定目标哦</button>
+
+
+  <button class='' wx:if='{{!hasTested}}' bindtap='goUniversityRecommand'>赶紧去测一下你能上哪所日本大学吧</button>
+
+  <view class='commercials'>
+  <view class='advertise' wx:if='{{majorAd}}'>专业课广告</view>
+  <view class='advertise' wx:if='{{jaAd}}'>日语广告</view>
+  <view class='advertise' wx:if='{{enAd}}'>英语广告</view>
+  </view>
+
+
+
+

@@ -1,0 +1,99 @@
+/* miniprogram/pages/university/uIndex/uIndex.wxss */
+@import '../../../style/general.wxss';
+
+.content{
+  height: 100%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: rgb(250, 250, 250);
+  padding-top: 20rpx;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  margin-bottom: 120rpx;
+}
+
+.centerLogo{
+  display: flex;
+  justify-content: center;
+}
+
+.lianjinLogo{
+  background-color: #FFFFFF;
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.testTitle{
+  font-size: 40rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.seconeTitle{
+  font-size: 30rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.major{
+  justify-content: center;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.subRadio{
+  margin-left: 40px;
+}
+
+.universityLevel{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.universitySelect{
+  margin-left: 0px;
+}
+
+.departmentLevel{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.grade{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.radioGroup{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.subGrade{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.numberGrade{
+  margin-top: 10px;
+}
+
+.numberGrade{
+  margin-top: 5px;
+}
+
+.goResult{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}

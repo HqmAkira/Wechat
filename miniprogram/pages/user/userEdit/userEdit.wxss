@@ -1,0 +1,14 @@
+/* miniprogram/pages/user/userEdit/userEdit.wxss */
+.infoTag {
+  margin-bottom: 40rpx;
+}
+
+.edit {
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.tagLabel {
+  width: 330rpx;
+}
